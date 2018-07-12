@@ -1,0 +1,16 @@
+begin
+	integer i;
+	switch month:= Jan,Feb,March;
+
+	outstring(1,"which month");
+	ininteger(1,i);
+
+	goto month[i];
+Jan:	outstring(1,"Jan has 31 days")
+		goto endlabel;
+Feb:	outstring(1,"Feb has 29 days")
+		goto endlabel;
+March:	outstring(1,"March has 30 days")
+		goto endlabel;
+
+endlabel: end
